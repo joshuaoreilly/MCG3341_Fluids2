@@ -4,7 +4,7 @@ clc; clear all; close all
 
 U0 = 0;     % Initial speed
 nu = 10^(-6);           % Kinematic viscocity nu = mu/rho
-h = 0.01;               % Height
+h = 100;               % Height
 nmbrPts = 20;           % Number of vertical divides
 % Reynolds Number?
 %omega   = Re*nu/(h^2);      % Omega

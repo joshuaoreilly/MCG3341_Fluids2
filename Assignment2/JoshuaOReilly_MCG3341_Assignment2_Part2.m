@@ -45,7 +45,7 @@ for i = 2:tsteps
 end
 
 plot(U(end,:), y, 'k');
-title(['Velocity profile for R = ',num2str(Re)]);
+title(['Velocity profile for Re = ',num2str(Re)]);
 xlabel('Velocity (m/s)');
 ylabel('height (m)')
 grid minor

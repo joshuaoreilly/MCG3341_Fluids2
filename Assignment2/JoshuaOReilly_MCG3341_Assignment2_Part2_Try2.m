@@ -4,10 +4,10 @@ clc; clear all; close all
 
 U0 = 0;     % Initial speed
 nu = 10^(-6);           % Kinematic viscocity nu = mu/rho
-h = 0.01;               % Height
+h = 100;               % Height
 nmbrPts = 20;           % Number of vertical divides
 % Reynolds Number
-Re = 100;        % Value of Re changed for each question
+Re = 0.01;        % Value of Re changed for each question
 omega   = Re*nu/(h^2);      % Omega
 
 % Discretization
@@ -21,7 +21,7 @@ tsteps = idivide(elapsedTime, dt, 'ceil');  % Find number of steps, round up
 
 t = 0;
 Uo = 1;     % Speed constant
-U = zeros(nmbrPts);     % Velocities for first Reynolds number
+U(nmbrPts) = 0;    % Velocities for first Reynolds number
 % Rows are the speeds for different times, columns are at different heights
 %Unew = zeros(nmbrPts + 2);  % Updating velocity values or something...
 y = linspace(0,h,nmbrPts);
